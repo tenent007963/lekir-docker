@@ -16,6 +16,7 @@ RUN a2enmod rewrite
 
 # Copy custom php.ini file
 COPY php.ini /usr/local/etc/php/
+COPY docker-php.conf /etc/apache2/conf-enabled/
 
 # Install required PHP extensions
 RUN apt-get update && apt-get install -y \
@@ -38,8 +39,8 @@ RUN mkdir -p /var/www/html/uploads \
     && chmod -R 755 /var/www/html/uploads
 
 # Disable directory listing, tokens, and server information
-RUN echo "Options -Indexes" >> /etc/apache2/apache2.conf \
-    && echo "ServerTokens Prod" >> /etc/apache2/apache2.conf \
-    && echo "ServerSignature Off" >> /etc/apache2/apache2.conf
+#    RUN echo "Options -Indexes" >> /etc/apache2/apache2.conf \
+#    && echo "ServerTokens Prod" >> /etc/apache2/apache2.conf \
+#    && echo "ServerSignature Off" >> /etc/apache2/apache2.conf
 
 USER www-data

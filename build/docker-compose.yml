@@ -1,0 +1,13 @@
+services:
+  php-apache:
+    ports:
+      - "13370:80"
+      - "4444:4444"
+    build: './img/php'
+  mysql:
+    ports:
+      - "3306:3306"
+    build: './img/mysql'
+    environment:
+      MYSQL_ROOT_PASSWORD: "password"
+      MYSQL_DATABASE: "lekir"

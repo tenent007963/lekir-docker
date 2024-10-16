@@ -1,19 +1,16 @@
 services:
   php-apache:
+    image: docker.io/tenent007963/lekir-php-apache:latest
     ports:
-      - "1337:80"
+      - "13370:80"
       - "4444:4444"
-    build: './build/php'
+    restart: unless-stopped
   mysql:
+    image: docker.io/tenent007963/lekir-mysql:latest
     ports:
       - "3306:3306"
     build: './build/mysql'
     environment:
       MYSQL_ROOT_PASSWORD: "password"
       MYSQL_DATABASE: "lekir"
-    volumes:
-      - dbData:/var/lib/mysql
-      - ./lekir.sql:/docker-entrypoint-initdb.d/dump.sql
-volumes:
-  app:
-  dbData:
+    restart: unless-stopped

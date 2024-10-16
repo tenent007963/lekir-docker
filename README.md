@@ -14,7 +14,7 @@ For more information about Lekir Framework, visit the [Lekir Repo](https://githu
 |-----------------------------------------|
 
 
-3. Access lekir web panel via http://localhost:1337 or http://127.0.0.1:1337
+3. Access lekir web panel via http://localhost:13370 or http://127.0.0.1:13370
 
 ##  Information 
 By default, the docker images will bind to port 3306, 13370 & 4444 on your localhost.

@@ -18,9 +18,11 @@ For more information about Lekir Framework, visit the [Lekir Repo](https://githu
 
 ##  Information 
 By default, the docker images will bind to port 3306, 13370 & 4444 on your localhost.
-13370 - web
-3306 - mysql
-4444 - port for reverse shell or etc
+13370 - web     
+
+3306 - mysql     
+
+4444 - port for reverse shell or etc   
 
 | :warning: Make sure|
 |:---------------------------|
